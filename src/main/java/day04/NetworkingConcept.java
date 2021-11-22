@@ -17,7 +17,7 @@ public class NetworkingConcept {
     private static FileWriter fileWriter;
     public static void main(String[] args){
         //METHOD 1 -- Java.net.HttpURLConnection
-        /*BufferedReader reader;
+        BufferedReader reader;
         String line;
         StringBuffer response = new StringBuffer();
         try {
@@ -49,7 +49,7 @@ public class NetworkingConcept {
             e.printStackTrace();
         }finally {
             connection.disconnect();
-        }*/
+        }
         //Method 2(added in java 11) -- java.net.http.HttpClient;
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create("https://jsonplaceholder.typicode.com/albums")).build();
